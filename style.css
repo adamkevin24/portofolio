@@ -599,3 +599,39 @@ header.scrolled{
 .pills li:hover{ background: var(--red); color: #000; }
 .pills i{ color: var(--red); margin-right: 0.6rem; }
 .pills li:hover i{ color: #000; }
+
+/* ---------- Burger menu (mobile) ---------- */
+.burger{ display: none; }
+@media (max-width: 995px){
+    header{ flex-wrap: nowrap; }
+    .burger{
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        gap: 0.6rem; width: 4.4rem; height: 4.4rem;
+        background: transparent; border: 2px solid var(--red); border-radius: 1rem;
+        cursor: pointer;
+    }
+    .burger .bar{
+        display: block; width: 2.2rem; height: 2px; background: var(--red);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    header.open .burger .bar:nth-child(1){ transform: translateY(0.8rem) rotate(45deg); }
+    header.open .burger .bar:nth-child(2){ opacity: 0; }
+    header.open .burger .bar:nth-child(3){ transform: translateY(-0.8rem) rotate(-45deg); }
+    nav{
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0; padding: 0 5%;
+        background: rgba(0,0,0,0.96);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+        max-height: 0; overflow: hidden; visibility: hidden;
+        transition: max-height 0.4s ease, visibility 0.4s;
+    }
+    header.open nav{ max-height: 44rem; visibility: visible; }
+    nav a{
+        padding: 1.5rem 0; font-size: 1.8rem;
+        border-bottom: 1px solid var(--line);
+    }
+    nav a:last-child{ border-bottom: none; }
+    nav a:hover, nav a.active{ border-bottom: 1px solid var(--line); padding-left: 1rem; }
+    nav a:last-child:hover, nav a.active:last-child{ border-bottom: none; }
+}
