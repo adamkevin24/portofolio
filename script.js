@@ -93,3 +93,15 @@ const countObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.6 });
 document.querySelectorAll(".stat").forEach((s) => countObserver.observe(s));
+
+// Burger menu (mobile)
+const burger = document.getElementById("burger");
+function setMenu(open) {
+    header.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+burger.addEventListener("click", () => setMenu(!header.classList.contains("open")));
+document.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+addEventListener("resize", () => { if (innerWidth > 995) setMenu(false); });
