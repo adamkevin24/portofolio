@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Adam Kevin, Informatics Engineering student and data science practitioner.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <title>Adam Kevin | Portfolio</title>
 </head>
 <body>
     <div class="progress" id="progress"></div>
     <header>
         <a href="#home" class="logo">Golazo</a>
-        <nav>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <nav id="nav">
             <a href="#home" class="active">Home</a>
             <a href="#services">Services</a>
             <a href="#experience">Experience</a>
@@ -24,7 +27,7 @@
 
     <section class="home" id="home">
         <div class="home-img">
-            <img id="photo" src="Adam.jpeg" alt="Adam Kevin">
+            <img id="photo" src="adam.jpg" alt="Adam Kevin">
         </div>
         <div class="home-content">
             <h1>Hi, it's <span>Adam</span></h1>
@@ -53,7 +56,8 @@
         <div class="stats">
             <div class="stat reveal"><b data-count="2">0</b><span>Coding Camps</span></div>
             <div class="stat reveal"><b data-count="2">0</b><span>Lab Assistant roles</span></div>
-            <div class="stat reveal"><b data-count="1">0</b><span>Internship</span></div>
+            <div class="stat reveal"><b data-count="3">0</b><span>Certificates</span></div>
+            <div class="stat reveal"><b data-count="1">0</b><span>Capstone shipped</span></div>
         </div>
         <div class="cards three">
             <article class="card">
@@ -109,18 +113,19 @@
             <div class="group-title reveal"><i class="fa-solid fa-chalkboard-user"></i><div><h3>Lab Assistant</h3><p>Teaching and mentoring fellow students.</p></div></div>
             <div class="timeline">
                 <article class="entry reveal">
-                    <h4>HPC Gunadarma</h4>
-                    <p class="org">Gunadarma University</p>
-                    <p class="meta">Sep 2026 – Present</p>
+                    <h4>Lab Assistant</h4>
+                    <p class="org">HPC Gunadarma</p>
+                    <p class="meta">Sep 2026 – Present · Remote</p>
                     <ul>
                         <li>Guide students through practicum sessions in data science and data analysis.</li>
                         <li>Help with exercises, debugging, and technical problem solving.</li>
+                        <li>Evaluate lab results and give feedback to improve understanding.</li>
                         <li>Staff the live chat and respond to incoming questions.</li>
                     </ul>
                     <ul class="chips"><li>Data Science</li><li>Data Analysis</li></ul>
                 </article>
                 <article class="entry reveal">
-                    <h4>Information Systems</h4>
+                    <h4>Information Systems Lab Assistant</h4>
                     <p class="org">Gunadarma University</p>
                     <p class="meta">Mar 2025 – Jul 2026</p>
                     <ul>
@@ -147,6 +152,10 @@
                 <article class="entry reveal">
                     <h4>Volunteer, Engineering Cup ft. Ruang Ekspresi</h4>
                     <p class="org">Gunadarma University</p>
+                </article>
+                <article class="entry reveal">
+                    <h4>Team Member, UFO Vanguard Team</h4>
+                    <p class="org">Google Hackfest 2024</p>
                 </article>
             </div>
         </div>
@@ -243,6 +252,6 @@
     </section>
 
     <footer>© 2026 Adam Kevin</footer>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
